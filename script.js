@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("YOUR_BACKEND_URL");
 
 const form = document.getElementById("form");
 const input = document.getElementById("input");
