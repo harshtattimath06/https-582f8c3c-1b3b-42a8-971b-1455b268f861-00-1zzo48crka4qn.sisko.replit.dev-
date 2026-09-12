@@ -17,6 +17,12 @@ io.on("connection", (socket) => {
     io.emit("chat message", `${socket.username}: ${msg}`);
   });
 
+  socket.on("chat message", (msg) => {
+    io.emit("chat message", `${socket.username}: ${msg}`);
+  });
+
+
+
   socket.on("disconnect", () => {
     if (socket.username) {
       io.emit("chat message", `${socket.username} left the chat ❌`);
